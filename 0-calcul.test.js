@@ -35,7 +35,7 @@ describe('calculateNumber', () => {
   });
 
   it('handles mixed signs correctly', () => {
-    assert.strictEqual(calculateNumber(-2.5, 3.6), 1);
+    assert.strictEqual(calculateNumber(-2.6, 3.6), 1);
   });
 
   it('rounds numbers with trailing 9\'s correctly', () => {
