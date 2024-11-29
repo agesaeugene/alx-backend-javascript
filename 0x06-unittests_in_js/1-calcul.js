@@ -5,16 +5,18 @@ const calculateNumber = (type, a, b) => {
   if (type === 'SUM') {
     return roundA + roundB;
   }
+
   if (type === 'SUBTRACT') {
     return roundA - roundB;
   }
+
   if (type === 'DIVIDE') {
-    // Explicitly check if rounded value is 0
     if (roundB === 0) {
       return 'Error';
     }
     return roundA / roundB;
   }
+
   return 0;
 };
 

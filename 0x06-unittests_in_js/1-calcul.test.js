@@ -84,8 +84,9 @@ describe('calculateNumber', () => {
     });
 
     it('handles division by a negative number rounded to zero', () => {
-      assert.strictEqual(calculateNumber('DIVIDE', 8.0, -0.6), 'Error');
+      assert.strictEqual(calculateNumber('DIVIDE', -8, -0.1), 'Error');
     });
+  
 
     it('divides zero by a positive number', () => {
       assert.strictEqual(calculateNumber('DIVIDE', 0.0, 7.0), 0);
