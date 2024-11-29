@@ -1,0 +1,22 @@
+const calculateNumber = (type, a, b) => {
+  const roundA = Math.round(a);
+  const roundB = Math.round(b);
+
+  if (type === 'SUM') {
+    return roundA + roundB;
+  }
+  if (type === 'SUBTRACT') {
+    return roundA - roundB;
+  }
+  if (type === 'DIVIDE') {
+    // Explicitly check if rounded value is 0
+    if (roundB === 0) {
+      return 'Error';
+    }
+    return roundA / roundB;
+  }
+  return 0;
+};
+
+module.exports = calculateNumber;
+
